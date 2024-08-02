@@ -1,0 +1,583 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ffcc33, #ff9933);
+    color: #333;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #f4f4f4;
+    color: #333;
+}
+
+td {
+    color: #555;
+}
+
+#searchContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#rakeNumber {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#searchButton {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #2E86C1;
+    color: white;
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1; /* Allow to grow and shrink */
+    margin: 0 10px; /* Add some margin to prevent overflow */
+}
+
+.header .logo {
+    width: 75px;
+    height: 75px;
+    margin-right: 20px;
+}
+
+
+.header .menu-icon,
+.header .admin-icon {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.5em;
+    flex: none; /* Prevents flexbox from resizing these items */
+}
+
+.menu-icon:hover .user-menu,
+.admin-icon:hover .admin-menu {
+    display: block;
+}
+
+.menu-icon .user-menu,
+.admin-icon .admin-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.user-menu {
+    left: 0; /* Ensure the user menu opens to the left */
+}
+
+.admin-menu {
+    right: 0; /* Ensure the admin menu opens to the left */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.title {
+    text-align: center;
+}
+
+.heading-image {
+    max-height: 100px; /* Adjust the height to match the previous heading size */
+}
+
+.title p {
+    font-size: 1.2em;
+    color: #ddd;
+    margin-top: 0; /* Remove top margin for better alignment */
+}
+
+.moving-images {
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+    background: transparent; /* Transparent background for the moving images section */
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.image-container {
+    display: flex;
+    animation: move 40s linear infinite; /* Adjust the duration to control the speed */
+}
+
+.image-container img {
+    width: 100px;
+    height: 100px;
+    margin: 0 20px; /* Increased margin for better spacing */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+main h2 {
+    font-size: 3em; /* Increased font size for the welcome text */
+    margin-bottom: 10px; /* Slightly reduced margin to move it upward */
+}
+
+.search-bar {
+    margin: 40px 0; /* Increased margin for better spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar input, .search-bar button, .search-bar .info-btn {
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+.search-bar input {
+    flex: 1;
+    max-width: 300px; /* Adjust the max width as needed */
+}
+
+.search-bar button, .search-bar .info-btn {
+    flex-shrink: 0;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin: 10px 0;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+button.explore {
+    background: #28a745; /* Different color for explore button */
+}
+
+button.division {
+    background: #3F33FF; /* Different color for division buttons */
+    margin: 0 10px; /* Add margin to division buttons */
+}
+
+button.about-us {
+    background: #A233FF; /* Different color for about us button */
+}
+
+button.contribute {
+    background: #dc3545; /* Different color for contribute button */
+}
+
+button.infoButton {
+    background-color: #B43C3C; /* Background color for the info button */
+    color: #ffffff; /* Text color for the 'i' */
+    margin-left: 10px; 
+    font-size: 1.2em; 
+    width: 26px; 
+    height: 26px; 
+    border-radius: 50%; 
+    border: none; /* Removes default button border */
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Vertically centers the 'i' */
+    justify-content: center; /* Horizontally centers the 'i' */
+    cursor: pointer; /* Changes the cursor to pointer on hover */
+}
+
+.spacer{
+    margin-bottom: 100px; /* how high is your footer */
+    visibility: hidden; 
+  }
+
+footer {
+    padding: 10px 20px;
+    background: #2E86C1;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-left {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: right;
+    margin-right: 40px;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-icon1 {
+    height: 28.5px;
+    width: 28.5px;
+}
+
+.social-icon {
+    height: 30px;
+    width: 30px;
+}
+
+.extra-gap {
+    margin-left: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo-title {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px; /* Add margin for better spacing */
+    }
+    .title {
+        text-align: center;
+    }
+    .moving-images {
+        justify-content: center;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+form {
+    display: inline-block;
+    background: #fff;
+    padding: 90px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form {
+    background: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    display: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin-top: 10px;
+    color: #444;
+    width: 100%;
+    text-align: center;
+}
+
+form input[type="text"], form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+form input[type="file"] {
+    margin-top: 10px;
+}
+
+form button {
+    background: #28a745;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+form button:hover {
+    background: #218838;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Center the main container */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Center the result container */
+#resultContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Flexbox for result items */
+.result-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Image styles */
+.result-item img {
+    max-width: 150px;
+    max-height: 150px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+/* Details container */
+.result-item .details {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Center the buttons in the result item */
+#successMessage button, #errorMessage button {
+    margin-top: 20px;
+    align-self: center;
+}
+
+#successMessage, #errorMessage {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+#successMessage {
+    border-color: #28a745;
+    background: #d4edda;
+    color: #155724;
+}
+
+#errorMessage {
+    border-color: #dc3545;
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.agree {
+    color: #161f28;
+    background-color: #5ced73;
+}
+
+.disagree {
+    color: #161f28;
+    background-color: #ee6b6e;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button.shedChange {
+    background-color: #4CAF50; /* Green */
+}
+button.addRakeInfo {
+    background-color: #2196F3; /* Blue */
+}
+button.editRakeInfo {
+    background-color: #E22CF4; /* Deep Orange */
+}
+button.deleteRakeInfo {
+    background-color: #f44336; /* Red */
+}
+button.editRakeStatus {
+    background-color: #9C27B0; /* Purple */
+}
+button {
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 0; /* Added margin for spacing */
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}

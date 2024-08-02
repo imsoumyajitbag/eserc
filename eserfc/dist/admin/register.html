@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESERC - Train Rake Info</title>
+    <link rel="stylesheet" href="/dist/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/dist/images/logo.jpg" type="image/jpeg">
+</head>
+<body>
+    <header class="header">
+        <div class="menu-icon">☰
+            <div class="dropdown-content user-menu">
+                <a href="/dist/public/home.html">Home</a>
+                <a href="/dist/public/about.html">About</a>
+                <a href="/dist/public/contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="logo-title">
+            <img src="/dist/images/logo.jpg" alt="ESERC Logo" class="logo">
+            <div class="title">
+                <img src="/dist/images/heading.png" alt="ESERC Heading" class="heading-image">
+                <p>~ an autonomous group nourished by railfans</p>
+            </div>
+        </div>
+        <div class="admin-icon">⋮
+            <div class="dropdown-content admin-menu">
+                <a href="/dist/admin/login.html">Login</a>
+                <a href="/dist/admin/register.html">Register</a>
+            </div>
+        </div>
+    </header>
+    <div class="moving-images">
+        <div class="image-container">
+            <img src="/dist/images/image1.jpeg" alt="Image 1">
+            <img src="/dist/images/image2.jpeg" alt="Image 2">
+            <img src="/dist/images/image3.jpeg" alt="Image 3">
+            <img src="/dist/images/image4.jpeg" alt="Image 4">
+            <img src="/dist/images/image5.jpeg" alt="Image 5">
+            <img src="/dist/images/image6.jpeg" alt="Image 6">
+            <img src="/dist/images/image7.jpeg" alt="Image 7">
+            <img src="/dist/images/image8.jpeg" alt="Image 8">
+            <img src="/dist/images/image9.jpeg" alt="Image 9">
+            <img src="/dist/images/image10.jpeg" alt="Image 10">
+            <img src="/dist/images/image11.jpeg" alt="Image 11">
+            <img src="/dist/images/image12.jpeg" alt="Image 12">
+            <img src="/dist/images/image13.jpeg" alt="Image 13">
+            <img src="/dist/images/image14.jpeg" alt="Image 14">
+            <img src="/dist/images/image15.jpeg" alt="Image 15">
+            <img src="/dist/images/image1.jpeg" alt="Image 1">
+            <img src="/dist/images/image2.jpeg" alt="Image 2">
+            <img src="/dist/images/image3.jpeg" alt="Image 3">
+            <img src="/dist/images/image4.jpeg" alt="Image 4">
+            <img src="/dist/images/image5.jpeg" alt="Image 5">
+            <img src="/dist/images/image6.jpeg" alt="Image 6">
+            <img src="/dist/images/image7.jpeg" alt="Image 7">
+            <img src="/dist/images/image8.jpeg" alt="Image 8">
+            <img src="/dist/images/image9.jpeg" alt="Image 9">
+            <img src="/dist/images/image10.jpeg" alt="Image 10">
+            <img src="/dist/images/image11.jpeg" alt="Image 11">
+            <img src="/dist/images/image12.jpeg" alt="Image 12">
+            <img src="/dist/images/image13.jpeg" alt="Image 13">
+            <img src="/dist/images/image14.jpeg" alt="Image 14">
+            <img src="/dist/images/image15.jpeg" alt="Image 15">
+        </div>
+    </div>
+    <main>
+        <h1>Register</h1>
+        <form id="registerForm">
+            <label for="registerName">Name:</label>
+            <input type="text" id="name" required><br>
+    
+            <label for="registerUsername">Username:</label>
+            <input type="text" id="username" required><br>
+    
+            <label for="registerEmail">Email:</label>
+            <input type="email" id="email" required><br>
+    
+            <label for="registerPhone">Phone Number:</label>
+            <input type="tel" id="phone" required><br>
+    
+            <label for="registerPassword">Password:</label>
+            <input type="password" id="password" required><br>
+    
+            <label for="registerConfirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" required><br><br>
+    
+            <label for="securityCode">Security Code:</label>
+            <input type="text" id="securityCode" required><br>
+    
+            <button type="submit">Register</button>
+        </form>
+        <button id="generateSecurityCodeButton">Generate Security Code</button>
+        <p id="securityCodeMessage"></p>
+        <p id="timerMessage">Code is valid for: <span id="time">03:00</span></p>
+        <p>Already have an account? <a href="/dist/admin/login.html">Login here</a></p>
+    </main>
+    <div  class="spacer"> . </div>
+    <script type="module" src="/src/register.js"></script>
+    <footer>
+        <div class="footer-left">
+            Connect with us:
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="/dist/images/facebook.png" alt="Facebook" class="social-icon1">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="/dist/images/instagram.png" alt="Instagram" class="social-icon extra-gap">
+            </a>
+        </div>
+        <div class="footer-center">© ESERC 2024 . All Rights Reserved</div>
+        <div class="footer-right">Email: <a href="mailto:info.eserc@gmail.com">info.eserc@gmail.com</a></div>
+    </footer>
+</body>
+</html>
